@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/client/log.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button id = "all">Get Logs</button> <hr>
+
+    <h2>NEW LOG</h2>
+
+
+        <form id="create-form">
+            <input type="text" id="bike" placeholder="Bike Name">
+            <input type="text" id="track" placeholder="Track Name">
+            <select>
+                <option value="Sunny">Sunny</option>
+                <option value="Cloudy">Cloudy</option>
+                <option value="Raining">Raining</option>
+            </select>
+            <input type="number" id="laps" placeholder="Laps">
+            <input type="text" id="lap-time">
+            <label for="likes">List likes:</label>
+            <textarea id="likes" placeholder="List Likes separated by commas (limit 3)"></textarea>
+            <button>Add New Log</button>
+        </form>
+    
+
+
+
+
+
+
+
+    <section></section>
+
+    <script src="http:/node_modules/axios/dist/axios.min.js"></script>
+    <script src="/client/index.js"></script>
+</body>
+</html>
