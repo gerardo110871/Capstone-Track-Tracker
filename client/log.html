@@ -5,41 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/client/log.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    
+    <main class="gradient"></main>
 
-
-    <button id = "all">Get Logs</button> <hr>
-
-    <h2>NEW LOG</h2>
-
-
+            <header>
+                <a href="/client/index.html">
+                    <img alt="Home" src="/images/Yamaha-logo.png".style(width="100%")
+                    width=200" height="70">
+                 </a>
+                     <hr>
+            </header>
+            
+            <h2 id="h2">NEW LOG</h2>
         <form id="create-form">
-            <input type="text" id="bike" placeholder="Bike Name">
-            <input type="text" id="track" placeholder="Track Name">
-            <select>
+            <input type="text" class="round" id="bike" placeholder="Bike Name">
+            <input type="text" class="round" id="track" placeholder="Track Name">
+            <select class="round">
                 <option value="Sunny">Sunny</option>
                 <option value="Cloudy">Cloudy</option>
                 <option value="Raining">Raining</option>
             </select>
-            <input type="number" id="laps" placeholder="Laps">
-            <input type="text" id="lap-time">
+            <input type="number" class="round" id="laps" placeholder="Laps">
+            <input type="text" class="round" id="lap-time" placeholder="Lap Time">
             <label for="likes">List likes:</label>
-            <textarea id="likes" placeholder="List Likes separated by commas (limit 3)"></textarea>
-            <button>Add New Log</button>
-        </form>
+            <textarea class="round" id="likes" placeholder="List Likes separated by commas (limit 3)"></textarea>
+            <button class="round">Add New Log</button>
+        </form></div><br>
+
+        <button class="round" id = "all">GET LOGS</button> -->
+    
+        <section></section>
     
 
-
-
-
-
-
-
-    <section></section>
-
+    <footer></footer>
     <script src="http:/node_modules/axios/dist/axios.min.js"></script>
     <script src="/client/index.js"></script>
+
 </body>
 </html>

@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/client/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-
-    <div class="mapouter"><div class="gmap_canvas"><iframe width="1080" height="400" id="gmap_canvas" 
-        src="https://maps.google.com/maps?q=salt%20lake%20utah&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:1080px;}
-        </style><style>.gmap_canvas 
-        {overflow:hidden;background:none!important;height:400px;width:1080px;}</style></div></div>
-
-    <input type="button" onclick="location.href='/client/log.html'" value="Logs" />
-
-
     
+    <div class="gradient">
+        <header>
+            
+        </header>
+            <input id="log-button" type="button" onclick="location.href='/client/log.html'" value="Logs" />
+    </div>
+
+    <div id="footer">
+        <footer>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-snapchat-ghost"></a>
+        </footer>
+
+
+
+    </div>
+    <script src="http:/node_modules/axios/dist/axios.min.js"></script>
     <script src="/client/index.js"></script>
 </body>
 </html>

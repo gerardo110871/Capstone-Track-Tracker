@@ -1,6 +1,7 @@
 
 console.log('Got Connection')
 
+const gradient = document.querySelector(".gradient");
 const getAllBtn = document.querySelector('#all')
 const createForm = document.querySelector('#create-form')
 const newBikeInput = document.querySelector('#bike')
@@ -10,22 +11,28 @@ const newLapsInput = document.querySelector('#laps')
 const newLapTime = document.querySelector('#lap-time')
 const newLikesText = document.querySelector('textarea')
 const logsContainer = document.querySelector('section')
+const deleteBtn = document.querySelector('#delete')
 
 const baseURL = `http://localhost:5555`
 
+function onMouseMove(event) {
+  gradient.style.backgroundImage = 'radial-gradient(at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(0, 2, 128, 0.9) 0, #424242 90%)';
+}
 
 function createLogCard(char) {
   let charCard = document.createElement('div')
-  charCard.innerHTML = `<h3>${char.bikeName} </h3>
-  <p><b>Track Name:</b> ${char.trackName}</p>
-  <p><b>Weather:</b> ${char.weather} | <b>Laps:</b> ${char.laps}</p>
-  <b>Best Lap Time:</b> ${char.lapTime}</p>
-  <h4>Likes</h4>
+  charCard.innerHTML = `<div class="new-log"> <b><p class="new-log">${char.bikeName}</p></b>
+  <p class="new-log"><b>Track Name:</b> ${char.trackName}</p>
+  <p class="new-log"><b>Weather:</b> ${char.weather} | <b>Laps:</b> ${char.laps}</p>
+  <p class="new-log"><b>Best Lap Time:</b> ${char.lapTime}</p>
+  <h4 class="new-log">Likes</h4>
   <ul>
     <li>${char.likes[0]}</li>
     <li>${char.likes[1]}</li>
     <li>${char.likes[2]}</li>
-  </ul>`
+  </ul>
+  <button id="delete">Delete</button>
+  </div>`
 
   logsContainer.appendChild(charCard)
 }
@@ -79,10 +86,23 @@ function createNewLog(event) {
    newLikesText.value = ''
 }
 
-
+function deleteEntry(event) {
+  event.preventDefault();
+  event.target.parentNode.remove()
+  message.textContent = 'Log Deleted Successfully'
+  revealMessage()
+}
 
 
 getAllBtn.addEventListener('click', getAllLogs)
 createForm.addEventListener('submit', createNewLog)
+document.addEventListener("mousemove", onMouseMove)
+deleteBtn.addEventListener('click', deleteEntry)
+getAllLogs()
 
-// getAllLogs()
+
+
+function revealMessage(){
+  setTimeout(hide,1000)
+
+}
