@@ -11,36 +11,39 @@ const newLapsInput = document.querySelector('#laps')
 const newLapTime = document.querySelector('#lap-time')
 const newLikesText = document.querySelector('textarea')
 const logsContainer = document.querySelector('section')
-const deleteBtn = document.querySelector('#delete')
+const deleteBtn = document.querySelector('#deleteBtn')
+let imageURL = document.querySelector('#img')
 
 const baseURL = `http://localhost:5555`
 
-function onMouseMove(event) {
-  gradient.style.backgroundImage = 'radial-gradient(at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(0, 2, 128, 0.9) 0, #424242 90%)';
-}
+// function onMouseMove(event) {
+//   gradient.style.backgroundImage = 'radial-gradient(at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(0, 2, 128, 0.9) 0, #424242 90%)';
+// }
 
-function createLogCard(char) {
-  let charCard = document.createElement('div')
-  charCard.innerHTML = `<div class="new-log"> <b><p class="new-log">${char.bikeName}</p></b>
-  <p class="new-log"><b>Track Name:</b> ${char.trackName}</p>
-  <p class="new-log"><b>Weather:</b> ${char.weather} | <b>Laps:</b> ${char.laps}</p>
-  <p class="new-log"><b>Best Lap Time:</b> ${char.lapTime}</p>
+function createLogCard(log) {
+  let logCard = document.createElement('div')
+  logCard.classList.add('log-card')
+  logCard.innerHTML = `<div class="new-log"> <img alt='track Picture' src=${log.imageURL} class="track-picture"/>
+   <b><p class="new-log">${log.bikeName}</p></b>
+  <p class="new-log"><b>Track Name:</b> ${log.trackName}</p>
+  <p class="new-log"><b>Weather:</b> ${log.weather} | <b>Laps:</b> ${log.laps}</p>
+  <p class="new-log"><b>Best Lap Time:</b> ${log.lapTime}</p>
   <h4 class="new-log">Likes</h4>
-  <ul>
-    <li>${char.likes[0]}</li>
-    <li>${char.likes[1]}</li>
-    <li>${char.likes[2]}</li>
-  </ul>
-  <button id="delete">Delete</button>
+  <button onclick="deleteLog(${log.id})">delete</button>
   </div>`
+  logsContainer.appendChild(logCard)
 
-  logsContainer.appendChild(charCard)
+//   let deleteBtn = document.createElement('button')
+//   deleteBtn.textContent = 'DELETE'
+//   deleteBtn.innerHTML = `<div id="deleteBtn" >Delete</div>`
+//   deleteBtn.addEventListener('click', deleteLog)
+  
+//   charCard.appendChild(deleteBtn)
 }
-
 function clearLogs() {
   logsContainer.innerHTML = ``
 }
-//this will get all the logs in the server database
+//this will get all the logs in the server file
 function getAllLogs() {
   clearLogs()
 
@@ -60,15 +63,13 @@ function createNewLog(event) {
 
   clearLogs()
 
-  let newLikes = [...newLikesText.value.split(',')]
-
   let body = {
+    imageURL: imageURL.value,
     bikeName: newBikeInput.value,
     trackName: newTrackInput.value,
     weather: newWeatherDropDown.value,
     laps: newLapsInput.value,
     lapTime: newLapTime.value,
-    likes: newLikes
   }
 
   axios.post(`${baseURL}/logs`, body)
@@ -78,6 +79,7 @@ function createNewLog(event) {
      }
    })
 
+   imageURL.value = ''
    newBikeInput.value = ''
    newTrackInput.value = ''
    newWeatherDropDown.value = 'Sunny'
@@ -86,23 +88,13 @@ function createNewLog(event) {
    newLikesText.value = ''
 }
 
-function deleteEntry(event) {
+function deleteLog(event) {
   event.preventDefault();
   event.target.parentNode.remove()
-  message.textContent = 'Log Deleted Successfully'
-  revealMessage()
 }
 
 
 getAllBtn.addEventListener('click', getAllLogs)
 createForm.addEventListener('submit', createNewLog)
-document.addEventListener("mousemove", onMouseMove)
-deleteBtn.addEventListener('click', deleteEntry)
-getAllLogs()
-
-
-
-function revealMessage(){
-  setTimeout(hide,1000)
-
-}
+// document.addEventListener("mousemove", onMouseMove)
+// getAllLogs()

@@ -8,17 +8,17 @@ body, html {
   }
   
   body {
-    background-image: url('/images/r1.jpg');
+    background-color: rgb(98, 98, 98);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Rock Salt', cursive;
   }
   
-  .gradient {
+  /* .gradient {
     width: 100%;
     height: 100%;
     background-image: radial-gradient(at 300px 300px, rgba(19, 0, 129, 0.9) 0, #4D4FA7 90%);
-  }
+  } */
  header {
    height: 400px;
    background-color: transparent;
@@ -39,6 +39,7 @@ body, html {
     background-color: #3b3b3b;
     color:white;
     font-family: 'Rock Salt', cursive;
+    box-sizing: content-box;
  } 
 #button-section {
      display: flex;
@@ -54,10 +55,10 @@ body, html {
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 50px;
-    text-align: center;
+    width: 100%;
     text-decoration: none;
     border-radius: 50px;
+    box-sizing: content-box;
   }
 
 

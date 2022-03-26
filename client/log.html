@@ -13,8 +13,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <main class="gradient"></main>
+    <main>
+    <!-- <main class="gradient"></main> -->
 
             <header>
                 <a href="/client/index.html">
@@ -25,7 +25,9 @@
             </header>
             
             <h2 id="h2">NEW LOG</h2>
+    <div id="both-forms">
         <form id="create-form">
+            <input type='text'id="img"placeholder='Paste an image URL'/>
             <input type="text" class="round" id="bike" placeholder="Bike Name">
             <input type="text" class="round" id="track" placeholder="Track Name">
             <select class="round">
@@ -34,16 +36,19 @@
                 <option value="Raining">Raining</option>
             </select>
             <input type="number" class="round" id="laps" placeholder="Laps">
-            <input type="text" class="round" id="lap-time" placeholder="Lap Time">
+            <input type="text" class="round" id="lap-time" placeholder="Best Lap Time">
             <label for="likes">List likes:</label>
             <textarea class="round" id="likes" placeholder="List Likes separated by commas (limit 3)"></textarea>
             <button class="round">Add New Log</button>
-        </form></div><br>
-
-        <button class="round" id = "all">GET LOGS</button> -->
+        </form><br>
+    </div>
+    <div id="btn-space">
+        <button class="round" id = "all">GET LOGS</button>
+    </div>
+        
     
         <section></section>
-    
+    </main>
 
     <footer></footer>
     <script src="http:/node_modules/axios/dist/axios.min.js"></script>
