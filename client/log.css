@@ -1,6 +1,7 @@
 * {
   font-family: 'Oswald', sans-serif;
 }
+
 body, html {
     color: rgb(255, 255, 255);
     height: 100%;
@@ -16,12 +17,6 @@ body, html {
     font-family: 'Oswald', sans-serif;
   }
 
-  /* .gradient {
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(at 300px 300px, rgba(0, 2, 128, 0.9) 0, #424242 90%);
-  } */
-
 form {
     display: flex;
     flex-direction: column;
@@ -32,19 +27,17 @@ form {
     padding: 20px;
     border: solid 1px white;
 }
-#both-forms {
+#form-container {
   display: flex;
   justify-content: center;
 }
+
 #all {
   width: 450px;
   border-radius: 30px;
   color: white;
   background-color: rgb(66, 66, 66);
   font-family: 'Oswald', sans-serif;
-}
-
-#all {
   height: 100px;
   margin-top: 30px;
 }
@@ -61,12 +54,13 @@ form {
 #h2 {
   display: flex;
   justify-content:center;
+  font-size:32px;
   color: white;
 }
 
 .track-picture {
-  width: 90%; 
-  height: 300px;
+  width: 100%; 
+  height: 250px;
   border-radius:30px;
 }
 
@@ -83,10 +77,12 @@ form {
 }
 
 #log-delete-button {
+  font-size:16px;
   border-radius: 30px;
-  background-color:black;
+  background-color:rgb(73, 0, 0);
   color: white;
   font-family: 'Oswald', sans-serif;
+
 }
 
 section {

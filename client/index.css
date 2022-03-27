@@ -1,46 +1,108 @@
-*{
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
   font-family: 'Oswald', sans-serif;
 }
-/* animated Background */
-body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Rock Salt', cursive;
+
+html, body {
+  height: 5%;
+}
+
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  color: #000;
+  line-height: 1.6;
+  position: relative;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  -webkit-animation: drop 7s 0s infinite;
+          animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+.line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
   }
-  
-  body {
-    background-color: rgb(98, 98, 98);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Rock Salt', cursive;
+  100% {
+    top: 110%;
   }
-  
-  /* .gradient {
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(at 300px 300px, rgba(19, 0, 129, 0.9) 0, #4D4FA7 90%);
-  } */
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
  header {
    height: 400px;
    background-color: transparent;
  }
-/* google map */
-/* #map {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-} */
 /* button section */
-#log-button {
+#logs-page-button {
     font-weight: bold;
-    width: 100%;
+    width: 100px;
     padding: 30px; 
     border-radius: 30px;
     margin-top: 30px;
     background-color: #3b3b3b;
     color:white;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Oswald', sans-serif;
     box-sizing: content-box;
  } 
 #button-section {
@@ -48,12 +110,12 @@ body, html {
      justify-content: center;
      
  }
-#log-button:hover {
+#logs-page-button:hover {
     opacity: .5;
     background-color:transparent;
 }
-/* footer */
 
+/* footer */
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -62,7 +124,6 @@ body, html {
     border-radius: 50px;
     box-sizing: content-box;
   }
-
 
   .fa:hover {
     opacity: 0.7;
@@ -78,11 +139,10 @@ body, html {
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 50px;
+    width: 100px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 100px;
+    border-radius: 20px;
   }
   .fa:hover {
     opacity: 0.7;
