@@ -14,7 +14,6 @@ let logs = [
         weather: 'Sunny',
         laps: 39,
         lapTime: 19.96,
-        likes: ['Great traction', 'Well Maintained', 'Good service']
     },
     
     {
@@ -28,12 +27,13 @@ let logs = [
     }
 ]
 
+let id = 2
+
 app.get('/logs', (req, res) => {
     console.log('hit get logs')
     res.status(200).send(logs)
 })
 
-let id = 2
 
 app.post('/logs', (req, res) => {
     let newLog = {...req.body, id}
@@ -43,7 +43,7 @@ app.post('/logs', (req, res) => {
 })
 
 app.delete('/logs/:id', (req, res) => {
-    let index = logs.findIndex(log => +logs.id === +req.params.id)
+    let index = logs.findIndex(logs => +logs.id === +req.params.id)
     logs.splice(index, 1)
     res.status(200).send(logs)
 })

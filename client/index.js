@@ -15,20 +15,22 @@ const baseURL = `http://localhost:5555`
 function createLogCard(log) {
   let logCard = document.createElement('div')
   logCard.classList.add('log-card')
-  logCard.innerHTML = `<div class="new-log"> <img alt='track Picture' src=${log.imageURL} class="track-picture"/>
-   <b><p class="new-log">${log.bikeName}</p></b>
+  logCard.innerHTML = `<div class="new-log"> 
+  <img alt='track Picture' src=${log.imageURL} class="track-picture"/>
+  <b><p class="new-log">${log.bikeName}</p></b>
   <p class="new-log"><b>Track Name:</b> ${log.trackName}</p>
   <p class="new-log"><b>Weather:</b> ${log.weather} | <b>Laps:</b> ${log.laps}</p>
   <p class="new-log"><b>Best Lap Time:</b> ${log.lapTime}</p>
-  <h4 class="new-log">Likes</h4>
-  <button onclick="deleteLog(${log.id})">delete</button>
+  <button id="log-delete-button" onclick="deleteLog(${log.id})">delete</button>
   </div>`
   logsContainer.appendChild(logCard)
 }
+
 function clearLogs() {
   logsContainer.innerHTML = ``
 }
-//this will get all the logs in the server file
+
+//gets all the logs stored in the server file
 function getAllLogs() {
   clearLogs()
 
@@ -91,5 +93,4 @@ function deleteLog(id) {
 
 getAllBtn.addEventListener('click', getAllLogs)
 createForm.addEventListener('submit', createNewLog)
-// document.addEventListener("mousemove", onMouseMove)
 // getAllLogs()

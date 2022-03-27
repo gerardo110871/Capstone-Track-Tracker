@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Oswald', sans-serif;
+}
 body, html {
     color: rgb(255, 255, 255);
     height: 100%;
@@ -62,17 +64,8 @@ form {
   color: white;
 }
 
-/* .new-log {
-  color: rgb(255, 255, 255);
-  background-color: blue;
-  font-family: 'Oswald', sans-serif;
-  margin-left: 20px;
-  border: solid;
-  width: 700px;
-} */
-
 .track-picture {
-  width: 400px; 
+  width: 90%; 
   height: 300px;
   border-radius:30px;
 }
@@ -83,27 +76,20 @@ form {
   margin: 20px;
   padding: 20px;
   display: flex;
-  flex-direction:row;
+  flex-direction:column;
   align-items: center;
   border-radius: 30px;
-}
-/* .movie-title {
-  font-size: 18px;
-  margin: 5px 0;
+  font-family: 'Oswald', sans-serif;
 }
 
-.movie-rating {
-  font-size: 15px;
-  margin: 5px 0;
+#log-delete-button {
+  border-radius: 30px;
+  background-color:black;
+  color: white;
+  font-family: 'Oswald', sans-serif;
 }
 
-.btns-container {
-  width: 100%; 
+section {
   display: flex;
-  justify-content: space-evenly;
-  margin: 5px;
+  content:wrap;
 }
-
-.btns-container > button {
-  width: 20px;
-} */
