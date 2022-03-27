@@ -79,15 +79,15 @@ form {
 
 .log-card {
   background-color: rgb(0, 0, 0);
-  width: 450px;
+  width: 400px;
   margin: 20px;
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
   border-radius: 30px;
 }
-.movie-title {
+/* .movie-title {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -106,4 +106,4 @@ form {
 
 .btns-container > button {
   width: 20px;
-}
+} */
