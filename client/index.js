@@ -96,4 +96,3 @@ function deleteLog(id) {
 
 getAllBtn.addEventListener('click', getAllLogs)
 createForm.addEventListener('submit', createNewLog)
-// getAllLogs()

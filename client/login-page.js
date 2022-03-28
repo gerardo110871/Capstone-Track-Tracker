@@ -12,11 +12,12 @@ function loginSuccess(e) {
         window.location.href = "http://127.0.0.1:5500/client/index.html"
     } else {
         loginErrorMsg.style.opacity = .7;
-        loginErrorMsg.style.border = "0px"
     }
 }
 
-
+function focusInput() {
+    document.getElementById("username-field").focus()
+}
 
 
 loginButton.addEventListener("click", loginSuccess)

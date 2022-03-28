@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: 'Oswald', sans-serif;
   background-color:rgb(83, 83, 83);
+  color:white;
 }
 /* header */
  ul {
@@ -12,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  position:sticky;
+  background-color:rgb(0, 136, 136);
 }
 li a {
   width: 100%;
@@ -30,12 +31,64 @@ li a:hover {
   padding-left:10px;
   opacity:.7;
 }
+
 h1 {
-  color:white;
   font-size: 50px;
   display:flex;
   justify-content: center;
 }
+/* bucket list Form*/
+h2 {
+  font-size: 36px;
+}
+
+main {
+  margin: 50px;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 136, 136);
+  padding: 20px;
+  box-shadow: 0px 0px 10px gray;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+}
+
+ul {
+  font-size: 24px;
+  width: 100%;
+}
+
+li {
+  cursor: pointer;
+}
+
+.checked {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-weight: bold;
+  background: rgb(83, 83, 83);
+  color: white;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
 p {
   color:white;
   font-size: 20px;
@@ -44,7 +97,7 @@ p {
 }
 .track-pics {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 #track-img {
@@ -81,11 +134,6 @@ p {
 
 .fa-twitter {
   background: #55ACEE;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
   color: white;
 }
 

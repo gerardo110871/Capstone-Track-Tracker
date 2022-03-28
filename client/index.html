@@ -12,12 +12,15 @@
     <title>Track Logs</title>
 </head>
 <body>
+
+    
         <header>
                 <ul>
                     <li><a href="/client/index.html">Home</a></li>
                     <li><a href="/client/log.html">Logs</a></li>
                 </ul>
         </header>
+
 
             <section class="content">
                     <h1>Welcome to Your Log Page</h1>
@@ -27,26 +30,29 @@
                     </p>
                     <p></p>
             </section>
+            <main>
+                <h2>Bucket List</h2>
+                <section id="bucket-list">
+                  <form>
+                    <input placeholder="List" />
+                    <button><b>+</b></button>
+                  </form>
+                </section>
+                <ul class="track-list">
+                    <span>
 
+                    </span>
+                </ul>
+                <aside id="message"></aside>
+              </main>
             
 
         <section class="track-pics">
-            <img id="track-img" src="/images/brazil.jpg" alt="brazil GP track" width="400" height="300">
-            <img id="track-img" src="/images/austria.jpg" alt="austria GP track" width="400" height="300">
-            <img id="track-img" src="/images/americas.jpg" alt="americas GP track" width="400" height="300">
-            <img id="track-img" src="/images/malaysia.jpg" alt="malaysia GP track" width="400" height="300">
+            <img id="track-img" src="/images/brazil.jpg" alt="brazil GP track" width="500" height="300">
+            <img id="track-img" src="/images/austria.jpg" alt="austria GP track" width="500" height="300">
+            <img id="track-img" src="/images/americas.jpg" alt="americas GP track" width="500" height="300">
+            <img id="track-img" src="/images/malaysia.jpg" alt="malaysia GP track" width="500" height="300">
         </section>     
-
-        <section>
-            <form>
-              <input placeholder="TRACK NAME"/>
-              <button>ADD TRACK</button>
-            </form>
-          </section>
-          <ul>
-
-          </ul>
-          <aside id="message"></aside>
     
         <div ="footer-area">
                 <footer class="footer">
@@ -61,5 +67,6 @@
             
     <script src="http:/node_modules/axios/dist/axios.min.js"></script>
     <script src="/client/index.js"></script>
+    <script src="/client/bucket-list.js"></script>
 </body>
 </html>
