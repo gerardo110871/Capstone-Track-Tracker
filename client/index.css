@@ -45,7 +45,7 @@ p {
 .track-pics {
   display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
 }
 #track-img {
   margin: 10px;
