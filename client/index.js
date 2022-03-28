@@ -48,7 +48,7 @@ function getAllLogs() {
 
 function createNewLog(event) {
   event.preventDefault()
-
+  alert('Log Created.'); 
   clearLogs()
 
   let body = {
@@ -84,6 +84,8 @@ function displayLogs(arr) {
 
 function logsCallback({data:logs}) {
   displayLogs(logs)
+    prompt('reason for deleting log?')//user feedback 
+    alert('Log has been deleted')
 }
 
 function deleteLog(id) {

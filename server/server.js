@@ -19,8 +19,8 @@ let logs = [
     {
         id: 1,
         imageURL: 'https://media.istockphoto.com/photos/outdoor-track-and-racing-picture-id942673134?k=20&m=942673134&s=612x612&w=0&h=egK1oNwQYa_SOwjrY0KTv-iVHvX5DuljQJN1ZYC1MiM=',
-        bikeName: 'Yamaha R1', 
-        trackName: 'Apex Racetrack', 
+        bikeName: 'Yamaha R6', 
+        trackName: 'Malaysia Racetrack', 
         weather: 'Cloudy',
         laps: 20,
         lapTime: 23.56,
@@ -30,7 +30,7 @@ let logs = [
 let id = 2
 
 app.get('/logs', (req, res) => {
-    console.log('hit get logs')
+    // console.log('hit get logs')
     res.status(200).send(logs)
 })
 
