@@ -1,6 +1,6 @@
 console.log('Got Connection')
 
-const getAllBtn = document.querySelector('#all')
+const getAllBtn = document.querySelector('#all-logs')
 const createForm = document.querySelector('#create-form')
 const newBikeInput = document.querySelector('#bike')
 const newTrackInput = document.querySelector('#track')
@@ -16,12 +16,13 @@ function createLogCard(log) {
   let logCard = document.createElement('div')
   logCard.classList.add('log-card')
   logCard.innerHTML = `<div class="new-log"> 
+  <button id="log-delete-button" onclick="deleteLog(${log.id})">X</button><br><br>
   <img alt='track Picture' src=${log.imageURL} class="track-picture"/>
   <b><p class="new-log">${log.bikeName}</p></b>
   <p class="new-log"><b>Track Name:</b> ${log.trackName}</p>
   <p class="new-log"><b>Weather:</b> ${log.weather} | <b>Laps:</b> ${log.laps}</p>
   <p class="new-log"><b>Best Lap Time:</b> ${log.lapTime}</p>
-  <button id="log-delete-button" onclick="deleteLog(${log.id})">delete</button>
+  
   </div>`
   logsContainer.appendChild(logCard)
 }
