@@ -95,7 +95,7 @@ p {
   display:flex;
   justify-content: center;
 }
-.track-pics {
+#track-pics {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

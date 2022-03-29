@@ -34,7 +34,6 @@ app.get('/logs', (req, res) => {
     res.status(200).send(logs)
 })
 
-
 app.post('/logs', (req, res) => {
     let newLog = {...req.body, id}
     logs.unshift(newLog)

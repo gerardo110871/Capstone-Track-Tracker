@@ -1,11 +1,8 @@
-// const { default: axios } = require("axios");
-
 const message = document.querySelector('#message')
 let form = document.querySelector('form')
-form.addEventListener('submit', addTrack)
 
 
-function addTrack(event) {
+function addBucket(event) {
     event.preventDefault();
     const inputField = document.querySelector('input')
 
@@ -21,7 +18,7 @@ function addTrack(event) {
     deleteBtn.addEventListener('click', deleteMovie)
     track.appendChild(deleteBtn)
 
-    const list = document.querySelector('.track-list')
+    const list = document.querySelector('.bucket-list')
     list.appendChild(track)
 
     inputField.value = ''
@@ -47,3 +44,6 @@ function crossOffMovie(event) {
 function revealMessage(){
     setTimeout(hide, 1000)
 }
+
+
+  form.addEventListener('submit', addBucket)
