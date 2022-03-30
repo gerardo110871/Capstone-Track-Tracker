@@ -84,7 +84,7 @@ function displayLogs(arr) {
 
 function logsCallback({data:logs}) {
   displayLogs(logs)
-    prompt('reason for deleting log?')//user feedback 
+    // prompt('reason for deleting log?')//user feedback for later use
     alert('Log has been deleted')
 }
 
