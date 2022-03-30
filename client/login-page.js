@@ -9,7 +9,7 @@ function loginSuccess(e) {
 
     if (username === "seeks" && password === "thisisnice") {
         alert("You have successfully logged in.");
-        window.location.href = "http://127.0.0.1:5500/client/index.html"
+        window.location.href = "http://127.0.0.1:5501/client/index.html"
     } else {
         loginErrorMsg.style.opacity = .7;
     }
